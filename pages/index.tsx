@@ -19,7 +19,7 @@ const Home: NextPage = () => {
 
   // paste your contract address on goerli
   const { contract } = useContract(
-    "0x138ad768c9A3945712c2D3013bB82c3c49d8387d"
+    "0x6d4F326D1314484a493e9DC99b738e22903D5Ef8"
   );
 
   // note(roy): the hook is using react-query under the hood
@@ -61,6 +61,9 @@ const Home: NextPage = () => {
         onSuccess(data) {
           console.log(data);
           alert("Successfully Minted NFT!");
+        },
+        onError(error) {
+          console.log(error);
         },
       }
     );
